@@ -24,7 +24,9 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "1.8.2" % "test"
 )
 
-mainClass in (Compile) := Some("storm.starter.topology.ExclamationTopology")
+mainClass in Compile := Some("storm.starter.topology.ExclamationTopology")
+
+mainClass in assembly := Some("storm.starter.topology.ExclamationTopology")
 
 TaskKey[File]("generate-storm") <<= (baseDirectory, fullClasspath in Compile, mainClass in Compile) map { (base, cp, main) =>
   val template = """#!/bin/sh
@@ -32,7 +34,7 @@ java -classpath "%s" %s "$@"
 """
   val mainStr = main getOrElse error("No main class specified")
   val contents = template.format(cp.files.absString, mainStr)
-  val out = base / "run-storm.sh"
+  val out = base / "run-main-topology.sh"
   IO.write(out, contents)
   out.setExecutable(true)
   out
