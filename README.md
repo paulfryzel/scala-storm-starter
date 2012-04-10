@@ -1,6 +1,6 @@
 # Scala Storm starter
 
-The example [storm-starter](https://github.com/nathanmarz/storm-starter) project ported to Scala (2.9.1) and sbt (0.11.2); tested using [Specs2](http://etorreborre.github.com/specs2/).
+The example [storm-starter](https://github.com/nathanmarz/storm-starter) project ported to Scala (2.9.1) and sbt (0.11.2); tested using [Specs2](http://etorreborre.github.com/specs2/). [![Build Status](https://secure.travis-ci.org/paulfryzel/scala-storm-starter.png?branch=master)](http://travis-ci.org/paulfryzel/scala-storm-starter)
 
 
 ## Building with sbt
