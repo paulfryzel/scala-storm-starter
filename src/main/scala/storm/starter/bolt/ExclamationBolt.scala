@@ -14,14 +14,10 @@ class ExclamationBolt extends BaseRichBolt {
   }
 
   override def execute(tuple: Tuple) {
-    this.collector.emit(tuple, new Values(exclaim(tuple.getString(0))))
+    this.collector.emit(tuple, new Values(Exclaimer.exclaim(tuple.getString(0))))
   }
 
   override def declareOutputFields(declarer: OutputFieldsDeclarer) {
     declarer.declare(new Fields("word"))
-  }
-
-  private[this] def exclaim(s: String): String = {
-    s + "!!!"
   }
 }
