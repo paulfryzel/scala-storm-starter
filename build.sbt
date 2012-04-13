@@ -20,8 +20,8 @@ libraryDependencies ++= Seq(
   "org.clojure" % "clojure-contrib" % "1.2.0",
   "org.twitter4j" % "twitter4j-core" % "2.2.5-SNAPSHOT",
   "org.twitter4j" % "twitter4j-stream" % "2.2.5-SNAPSHOT",
-  "storm" % "storm" % "0.7.0" % "provided",
-  "org.specs2" %% "specs2" % "1.8.2" % "test"
+  "storm" % "storm" % "0.7.1" % "provided",
+  "org.specs2" %% "specs2" % "1.9" % "test"
 )
 
 mainClass in Compile := Some("storm.starter.topology.ExclamationTopology")
