@@ -15,6 +15,7 @@ class ExclamationBolt extends BaseRichBolt {
 
   override def execute(tuple: Tuple) {
     this.collector.emit(tuple, new Values(Exclaimer.exclaim(tuple.getString(0))))
+    this.collector.ack(tuple)
   }
 
   override def declareOutputFields(declarer: OutputFieldsDeclarer) {
