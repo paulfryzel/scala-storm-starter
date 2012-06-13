@@ -34,7 +34,7 @@ java -classpath "%s" %s "$@"
 """
   val mainStr = main getOrElse error("No main class specified")
   val contents = template.format(cp.files.absString, mainStr)
-  val out = base / "run-main-topology.sh"
+  val out = base / "bin/run-main-topology.sh"
   IO.write(out, contents)
   out.setExecutable(true)
   out

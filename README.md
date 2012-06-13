@@ -16,7 +16,7 @@ The example [storm-starter](https://github.com/nathanmarz/storm-starter) project
 Generate [and run] a script for desired topology (mainClass key is specified in build.sbt):
 
     sbt generate-storm
-    ./run-main-topology.sh
+    ./bin/run-main-topology.sh
     
 ## Packaging jar for remote deployment
 
