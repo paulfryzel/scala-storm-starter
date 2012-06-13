@@ -4,9 +4,9 @@ seq(assemblySettings: _*)
 
 name := "scala-storm-starter"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.0.2-SNAPSHOT"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
 
 fork in run := true
 
@@ -16,12 +16,11 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.clojure" % "clojure" % "1.2.0",
-  "org.clojure" % "clojure-contrib" % "1.2.0",
-  "org.twitter4j" % "twitter4j-core" % "2.2.5-SNAPSHOT",
-  "org.twitter4j" % "twitter4j-stream" % "2.2.5-SNAPSHOT",
-  "storm" % "storm" % "0.7.1" % "provided",
-  "org.specs2" %% "specs2" % "1.9" % "test"
+  "storm" % "storm" % "0.7.2" % "provided",
+  "org.clojure" % "clojure" % "1.4.0" % "provided",
+  "org.twitter4j" % "twitter4j-core" % "2.2.6-SNAPSHOT",
+  "org.twitter4j" % "twitter4j-stream" % "2.2.6-SNAPSHOT",
+  "org.specs2" %% "specs2" % "1.11" % "test"
 )
 
 mainClass in Compile := Some("storm.starter.topology.ExclamationTopology")
